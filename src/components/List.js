@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
 import { Text } from './Text';
 import colors from '../constants/colors';
@@ -10,12 +10,20 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     backgroundColor: colors.white,
   },
+  wrapper: {
+    display: 'flex',
+    justifyContent: 'space-between',
+  },
   titleText: {
     fontWeight: 'bold',
   },
   separator: {
     height: StyleSheet.hairlineWidth,
     backgroundColor: colors.border,
+  },
+  tinyLogo: {
+    width: '2rem',
+    height: '2rem',
   },
 });
 
@@ -25,8 +33,17 @@ export const ListItem = ({ title, subtitle, onPress = () => null }) => {
   return (
     <TouchableOpacity onPress={onPress}>
       <View style={rowStyles}>
-        <Text style={styles.titleText}>{title}</Text>
-        <Text>{subtitle}</Text>
+        <View style={styles.wrapper}>
+          <Image
+            style={styles.tinyLogo}
+            source={require('../../assets/favicon.png')}
+          />
+          <Text style={styles.titleText}>{title}</Text>
+          <Text>{subtitle}</Text>
+          <div>
+            <button type="submit">{'>'}</button>
+          </div>
+        </View>
       </View>
     </TouchableOpacity>
   );

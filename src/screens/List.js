@@ -6,7 +6,6 @@ import { ListItem, ListSeparator } from '../components/List';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: colors.background,
     paddingVertical: 20,
   },
@@ -14,14 +13,19 @@ const styles = StyleSheet.create({
 
 const screens = [
   {
-    title: 'Text',
-    subtitle: 'An example of using the Text.js components.',
-    target: 'TextDemo',
+    title: 'Button',
+    subtitle: 'An example of using the Button.js components.',
+    target: 'ButtonDemo',
   },
   {
-    title: 'Form',
-    subtitle: 'An example of using the Form.js components.',
-    target: 'FormDemo',
+    title: 'Button',
+    subtitle: 'An example of using the Button.js components.',
+    target: 'ButtonDemo',
+  },
+  {
+    title: 'Button',
+    subtitle: 'An example of using the Button.js components.',
+    target: 'ButtonDemo',
   },
   {
     title: 'Button',
