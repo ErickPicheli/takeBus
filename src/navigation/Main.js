@@ -2,17 +2,27 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import { List } from '../screens/List';
-import { ButtonDemo } from '../screens/Demos';
+import { Embarque } from '../screens/Embarque';
+import { Desembarque } from '../screens/Desembarque';
 
 const MainStack = createStackNavigator();
 
 export const Main = () => (
   <MainStack.Navigator>
-    <MainStack.Screen name="Rotas perto de você!" component={List} />
+    <MainStack.Screen 
+      name="Rotas" 
+      component={List} 
+      options={{ headerTitle: 'Rotas perto de você!' }}
+    />
     <MainStack.Screen
-      name="ButtonDemo"
-      component={ButtonDemo}
-      options={{ headerTitle: 'Button Demo' }}
+      name="Embarque"
+      component={Embarque}
+      options={{ headerTitle: 'Embarque' }}
+    />
+    <MainStack.Screen
+      name="Desembarque"
+      component={Desembarque}
+      options={{ headerTitle: 'Desembarque' }}
     />
   </MainStack.Navigator>
 );

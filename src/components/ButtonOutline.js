@@ -5,17 +5,17 @@ import colors from '../constants/colors';
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.red,
-    paddingVertical: 0,
+    backgroundColor: colors.primary,
+    paddingVertical: 14,
     borderRadius: 6,
-    width: 180,
-    borderWidth: 15,
-    borderColor: colors.red,
-    marginVertical: 3,
+    borderWidth: 3,
+    width: 350,
+    borderColor: colors.primary,
+    marginVertical: 7,
   },
   containerOutline: {
     backgroundColor: 'transparent',
-    borderColor: colors.border,
+    borderColor: colors.black,
   },
 
   text: {
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export const Button = ({ onPress = () => {}, children = '', type }) => {
+export const ButtonOutline = ({ onPress = () => {}, children = '', type }) => {
   const containerStyles = [styles.container];
   const textStyles = [styles.text];
 

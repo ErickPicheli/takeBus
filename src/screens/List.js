@@ -7,30 +7,33 @@ import { ListItem, ListSeparator } from '../components/List';
 const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.background,
-    paddingVertical: 20,
   },
 });
 
 const screens = [
   {
-    title: 'Button',
-    subtitle: 'An example of using the Button.js components.',
-    target: 'ButtonDemo',
+    pontoLocal: 'Nações Unidas Qd. 23 Par',
+    pontoRota: 'Unesp/CTI',
+    pontoHora: '9:30',
+    target: 'Embarque',
   },
   {
-    title: 'Button',
-    subtitle: 'An example of using the Button.js components.',
-    target: 'ButtonDemo',
+    pontoLocal: 'Nações Unidas Qd. 23 Impar',
+    pontoRota: 'Unesp/CTI',
+    pontoHora: '9:36',
+    target: 'Embarque',
   },
   {
-    title: 'Button',
-    subtitle: 'An example of using the Button.js components.',
-    target: 'ButtonDemo',
+    pontoLocal: 'Nações Unidas Qd. 26 Par',
+    pontoRota: 'Tecnológica',
+    pontoHora: '9:32',
+    target: 'Embarque',
   },
   {
-    title: 'Button',
-    subtitle: 'An example of using the Button.js components.',
-    target: 'ButtonDemo',
+    pontoLocal: 'Albino Tambara Qd. 03 Par',
+    pontoRota: 'Cidade Universitária via Distrito III',
+    pontoHora: '9:35',
+    target: 'Embarque',
   },
 ];
 
@@ -39,11 +42,12 @@ export const List = ({ navigation }) => {
     <FlatList
       style={styles.container}
       data={screens}
-      keyExtractor={item => item.title}
+      keyExtractor={item => item.pontoLocal}
       renderItem={({ item }) => (
         <ListItem
-          title={item.title}
-          subtitle={item.subtitle}
+          pontoLocal={item.pontoLocal}
+          pontoRota={item.pontoRota}
+          pontoHora={item.pontoHora}
           onPress={() => navigation.push(item.target)}
         />
       )}
