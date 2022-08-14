@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Alert, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Alert, Image, TouchableOpacity, useNavi } from 'react-native';
 import colors from '../constants/colors';
 import { Text } from '../components/Text';
 import { Button } from '../components/Button';
@@ -78,7 +78,7 @@ export const Embarque = ({ navigation }) => (
     </View>
     <br />
     <View style={styles.Center}>
-      <Button onPress={() => navigation.push('Desembarque')}>
+      <Button onPress={() => navigation.navigate('Desembarque')}>
         EMBARQUE
       </Button>
       <br />

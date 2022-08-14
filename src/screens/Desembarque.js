@@ -1,12 +1,9 @@
 import React from 'react';
-import { StyleSheet, View, Alert, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, View} from 'react-native';
 
 import colors from '../constants/colors';
 import { Text } from '../components/Text';
 import { Button } from '../components/Button';
-import { ButtonOutline } from '../components/ButtonOutline';
-import { TextInput } from '../components/Form';
-import { useLogin } from '../util/auth';
 
 const styles = StyleSheet.create({
   topRow: {
@@ -82,7 +79,7 @@ export const Desembarque = ({ navigation }) => (
     </View>
     <br />
     <View style={styles.Center}>
-      <Button onPress={() => navigation.push('Rotas')}>
+      <Button onPress={() => navigation.popToTop()}>
         DESEMBARQUE
       </Button>
     </View>
